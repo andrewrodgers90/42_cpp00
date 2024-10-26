@@ -6,17 +6,18 @@
 /*   By: arodgers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:37:39 by arodgers          #+#    #+#             */
-/*   Updated: 2024/06/26 14:11:06 by arodgers         ###   ########.fr       */
+/*   Updated: 2024/09/18 14:09:18 by arodgers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int	getLength(const std::string &input)
+int getLength(const std::string &input)
 {
 	int	len;
 
 	len = 0;
+	
 	while (input[len])
 		len++;
 
@@ -30,7 +31,6 @@ std::string	skipSpace(const std::string &input)
 	std::string	sub;
 
 	start = 0;
-	// end = input.length();
 	end = getLength(input);
 
 	while (start < end && std::isspace(input[start]))
@@ -65,5 +65,6 @@ int	main(int ac, char **av)
 		}
 	}
 	std::cout << std::endl;
+	
 	return (0);
 }
